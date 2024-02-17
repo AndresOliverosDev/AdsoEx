@@ -1,12 +1,12 @@
 package Academy.main.model;
 
-import jakarta.persistence.GeneratedValue;
+/* import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-//import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Controller;
 
-//@Controller
+@Controller */
 public class Customers {
     public /*@Id @GeneratedValue(strategy = GenerationType.IDENTITY)*/ Integer ced;
     public String fullName;
