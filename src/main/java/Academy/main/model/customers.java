@@ -1,14 +1,20 @@
 package Academy.main.model;
 
-public class customers {
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
-    private Long ced;
-    private String fullName;
-    private String lastName;
-    private Long numberPhone;
-    private String address;
+//import org.springframework.stereotype.Controller;
 
-    public customers(Long ced, String fullName, String lastName, Long numberPhone, String address) {
+//@Controller
+public class Customers {
+    public /*@Id @GeneratedValue(strategy = GenerationType.IDENTITY)*/ Integer ced;
+    public String fullName;
+    public String lastName;
+    public Integer numberPhone;
+    public String address;
+    
+    public Customers(Integer ced, String fullName, String lastName, Integer numberPhone, String address) {
         this.ced = ced;
         this.fullName = fullName;
         this.lastName = lastName;
@@ -16,32 +22,6 @@ public class customers {
         this.address = address;
     }
 
-    public Long getCed() {
-        return ced;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public Long getNumberPhone() {
-        return numberPhone;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setNumberPhone(Long numberPhone) {
-        this.numberPhone = numberPhone;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    };
+    
 
 }
