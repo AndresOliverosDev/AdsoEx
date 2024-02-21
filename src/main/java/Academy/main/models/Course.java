@@ -1,7 +1,14 @@
-package Academy.main.model;
+package Academy.main.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "Courses")
 public class Course {
 
+    @Id
     public Integer idCourse;
     public String name;
     public String description;
