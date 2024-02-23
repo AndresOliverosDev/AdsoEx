@@ -2,8 +2,11 @@ package Academy.main.services;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import Academy.main.models.Customer;
 
+@Service
 public interface CustomerService {
 
     List<Customer> getAll();
