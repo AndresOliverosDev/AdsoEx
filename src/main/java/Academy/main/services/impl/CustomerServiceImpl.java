@@ -39,8 +39,8 @@ public class CustomerServiceImpl implements CustomerService {
         Customer customerBBDD = customerRepository.findById(id).orElse(null);
 
         if(customerBBDD != null){
-            customerBBDD.setFullName(customer.getFullName());
-            customerBBDD.setLastName(customer.getLastName());
+            customerBBDD.setFullname(customer.getFullname());
+            customerBBDD.setLastname(customer.getLastname());
             customerBBDD.setNumberPhone(customer.getNumberPhone());
             customerBBDD.setAddress(customer.getAddress());
             return customerRepository.save(customerBBDD);
