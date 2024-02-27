@@ -7,5 +7,5 @@ import Academy.main.models.Customer;
 
 // Stereotype Repository
 @Repository
-public interface CustomerRepository extends JpaRepository<Customer, Integer> {
+public interface CustomerRepository extends JpaRepository<Customer, Long> {
 }

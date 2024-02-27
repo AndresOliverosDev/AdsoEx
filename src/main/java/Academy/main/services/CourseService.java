@@ -11,11 +11,11 @@ public interface CourseService {
 
     List<Course> getAllCourses();
 
-    Course getByIdCourse(Integer id);
+    Course getByIdCourse(Long id);
 
     Course addCourse(Course course);
 
-    Course updateCourse(Integer id, Course course);
+    Course updateCourse(Long id, Course course);
 
-    void deleteCourse(Integer id);
+    void deleteCourse(Long id);
 }

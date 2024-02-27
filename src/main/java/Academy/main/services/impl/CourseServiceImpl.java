@@ -23,7 +23,7 @@ public class CourseServiceImpl implements CourseService{
 
     @SuppressWarnings("null")
     @Override
-    public Course getByIdCourse(Integer id) {
+    public Course getByIdCourse(Long id) {
         return courseRepository.findById(id).orElse(null);
     }
 
@@ -35,7 +35,7 @@ public class CourseServiceImpl implements CourseService{
 
     @SuppressWarnings("null")
     @Override
-    public Course updateCourse(Integer id, Course course) {
+    public Course updateCourse(Long id, Course course) {
         Course courseBBDD = courseRepository.findById(id).orElse(null);
 
         if (courseBBDD != null) {
@@ -48,7 +48,7 @@ public class CourseServiceImpl implements CourseService{
 
     @SuppressWarnings("null")
     @Override
-    public void deleteCourse(Integer id) {
+    public void deleteCourse(Long id) {
         courseRepository.deleteById(id);
     }
 

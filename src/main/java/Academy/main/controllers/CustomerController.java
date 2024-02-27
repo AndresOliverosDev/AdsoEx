@@ -27,7 +27,7 @@ public class CustomerController{
     }
 
     @GetMapping("/getCustomerById")
-    public Customer getCustomerById(Integer id) {
+    public Customer getCustomerById(Long id) {
         return customerService.getById(id);
     }
 
@@ -37,12 +37,12 @@ public class CustomerController{
     }
 
     @PutMapping("/updateCustomer")
-    public Customer updateCustomer(@RequestBody Integer id, Customer customer) {
+    public Customer updateCustomer(@RequestBody Long id, Customer customer) {
         return customerService.updateCustomer(id, customer);
     }
 
 @DeleteMapping("/deleteCustomer")
-public ResponseEntity<String> deleteCustomer(Integer id) {
+public ResponseEntity<String> deleteCustomer(Long id) {
     try {
         customerService.dellCustomer(id);
             return ResponseEntity.ok("Cliente con ID " + id + " eliminado correctamente");

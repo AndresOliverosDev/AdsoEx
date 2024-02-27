@@ -11,13 +11,13 @@ import lombok.Data;
 
 public class Customer {
     @Id
-    public Integer ced;
+    public Long ced;
     public String fullname;
     public String lastname;
-    public Integer numberPhone;
+    public Long numberPhone;
     public String address;
 
-    public Customer(Integer ced, String fullName, String lastName, Integer numberPhone, String address) {
+    public Customer(Long ced, String fullName, String lastName, Long numberPhone, String address) {
         this.ced = ced;
         this.fullname = fullName;
         this.lastname = lastName;

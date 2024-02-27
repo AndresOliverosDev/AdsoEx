@@ -15,23 +15,16 @@ public class Course {
 
     @Getter
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idCourse;
+    @Column(name = "idCourse")
+    private Long idCourse;
 
     @Getter
     @Setter
-    @Column
+    @Column(name = "name")
     private String name;
 
     @Getter
     @Setter
-    @Column
+    @Column(name = "description")
     private String description;
-
-    public Course(String name, String description) {
-        this.name = name;
-        this.description = description;
-    }
-    public Course() {
-        
-    }
 }

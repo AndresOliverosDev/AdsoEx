@@ -11,11 +11,11 @@ public interface CustomerService {
 
     List<Customer> getAll();
 
-    Customer getById(Integer id);
+    Customer getById(Long id);
 
     Customer addCustomer(Customer customer);
     
-    Customer updateCustomer(Integer id,Customer customer);
+    Customer updateCustomer(Long id,Customer customer);
 
-    void dellCustomer(Integer id);
+    void dellCustomer(Long id);
 }
