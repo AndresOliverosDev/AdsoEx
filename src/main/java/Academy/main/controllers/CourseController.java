@@ -28,9 +28,9 @@ public class CourseController {
         return courseService.getAllCourses();
     };
 
-    @PostMapping("/getByIdCourse")
-    public Course getByIdCourse(@RequestBody Long id) {
-        return courseService.getByIdCourse(id);
+    @PostMapping("/getById")
+    public Course getById(@RequestBody Long id) {
+        return courseService.getById(id);
     };
 
     @PostMapping("/addCourse")

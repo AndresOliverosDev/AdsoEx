@@ -23,7 +23,7 @@ public class CourseServiceImpl implements CourseService{
 
     @SuppressWarnings("null")
     @Override
-    public Course getByIdCourse(Long id) {
+    public Course getById(Long id) {
         return courseRepository.findById(id).orElse(null);
     }
 

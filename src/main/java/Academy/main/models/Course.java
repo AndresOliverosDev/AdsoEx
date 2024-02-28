@@ -10,21 +10,22 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "Courses")
+@Table(name = "courses")
 public class Course {
 
     @Getter
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idCourse")
-    private Long idCourse;
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
+    @Id
+    @Column(name = "id_course")
+    private Long id;
 
     @Getter
     @Setter
-    @Column(name = "name")
+    @Column
     private String name;
 
     @Getter
     @Setter
-    @Column(name = "description")
+    @Column
     private String description;
 }

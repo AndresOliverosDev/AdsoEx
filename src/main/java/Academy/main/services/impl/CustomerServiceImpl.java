@@ -21,16 +21,19 @@ public class CustomerServiceImpl implements CustomerService {
         return customerRepository.findAll();
     };
 
+    @SuppressWarnings("null")
     @Override
     public Customer getById(Long id) {
     return customerRepository.findById(id).orElseThrow(() -> new NoSuchElementException("Customer not found with id: " + id));
     };
 
+    @SuppressWarnings("null")
     @Override
     public Customer addCustomer(Customer customer) {
         return customerRepository.save(customer);
     };
 
+    @SuppressWarnings("null")
     @Override
     public Customer updateCustomer(Long id, Customer customer) {
         Customer customerBBDD = customerRepository.findById(id).orElse(null);
@@ -38,15 +41,17 @@ public class CustomerServiceImpl implements CustomerService {
         if(customerBBDD != null){
             customerBBDD.setFullname(customer.getFullname());
             customerBBDD.setLastname(customer.getLastname());
-            customerBBDD.setNumberPhone(customer.getNumberPhone());
+            customerBBDD.setPhone(customer.getPhone());
             customerBBDD.setAddress(customer.getAddress());
             return customerRepository.save(customerBBDD);
         }
         return null;
     };
 
+    @SuppressWarnings("null")
     @Override
     public void dellCustomer(Long id) {
         customerRepository.deleteById(id);
+        
     };
 };
